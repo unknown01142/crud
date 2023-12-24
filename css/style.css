@@ -1,0 +1,26 @@
+.Book {
+  background-color: #f7ecde;
+}
+h3::selection{
+  background-color:bisque;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+h3 {
+  font-family: "Righteous" ,cursive;
+  color: #3FA55B;
+  position: relative;
+}
+
+.separator::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px dotted #000;
+  margin: 30px 0;
+}

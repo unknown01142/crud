@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- h1 family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Pacifico&family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- h2 family  -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>BookMark</title>
+  </head>
+  <body>
+    <section class="Book min-vh-100">
+      <h1 class="text-center">Bookmarker</h1>
+
+      <div>
+        <div class="container">
+          <div class="separator"></div>
+
+          <h3 class="text-center">Bookmark your favorite sites</h3>
+
+          <div class="inputs p-3 d-flex flex-column justify-content-center">
+            <div class="name">
+              <i class="fa-solid fa-book-bookmark"></i>
+              <label for="siteNameInput align-items-left">Site Name :</label>
+              <input
+                oninput="validationName()"
+                class="form-control mt-2"
+                type="text"
+                id="siteNameInput"
+              />
+              <div id="nameMessage" class="alert alert-danger d-none">Invalid Name ......</div>
+            </div>
+
+            <div class="url">
+              <i class="fa-solid fa-link mt-3"></i>
+              <label for="sitUrlInput">Site URL :</label>
+              <input
+                oninput="validationUrl()"
+                class="form-control mt-2"
+                type="text"
+                id="sitUrlInput"
+              />
+              <div id="urlMessage" class="alert alert-danger d-none">Invalid Url ......</div>
+            </div>
+            <button
+              onclick="addBookMark()"
+              class="btn btn-danger my-3 px-5 rounded mx-auto text-center"
+              id="btn-submit"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="separator"></div>
+          <table class="table my-3 text-center">
+            <thead>
+              <th>index</th>
+              <th>website Name</th>
+              <th>visit</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
